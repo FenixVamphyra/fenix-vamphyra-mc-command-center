@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17111c">
+<meta name="description" content="Central de comando artística e profissional de Fênix Vamphyra, Mestre de Cerimônias.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<title>Fênix Vamphyra • MC Command Center</title>
+</head>
+<body>
+<div class="launch-screen" id="launchScreen" aria-label="Fênix Vamphyra MC Command Center">
+  <div class="launch-orbit"><img src="assets/icon-512.png" alt="Avatar de Fênix Vamphyra"></div>
+  <p class="launch-kicker">CULTURA · ARTE · RESISTÊNCIA</p>
+  <h1>FÊNIX <span>VAMPHYRA</span></h1>
+  <p class="launch-subtitle">MC COMMAND CENTER</p>
+  <div class="launch-loader"><span></span></div>
+</div>
+<div class="app-shell">
+  <header class="topbar">
+    <button class="icon-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <div class="brand-mini"><span class="spark">✦</span><span>FÊNIX VAMPHYRA</span></div>
+    <button class="icon-btn" id="settingsBtn" aria-label="Configurações">⚙</button>
+  </header>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head"><div class="drawer-mark">FV</div><div><strong>Fênix Vamphyra</strong><small>Mestre de Cerimônias</small></div><button class="icon-btn" id="closeMenu" aria-label="Fechar menu">×</button></div>
+    <nav id="nav">
+      <button data-view="home">⌂ <span>Início</span></button>
+      <button data-view="dashboard">✦ <span>Central de comando</span></button>
+      <button data-view="events">▦ <span>Agenda e eventos</span></button>
+      <button data-view="scripts">☷ <span>Meus roteiros</span></button>
+      <button data-view="stage">🎤 <span>Modo palco</span></button>
+      <button data-view="people">♧ <span>Convidados e rede</span></button>
+      <button data-view="partners">◇ <span>Patrocinadores e parceiros</span></button>
+      <button data-view="library">▧ <span>Biblioteca de materiais</span></button>
+      <button data-view="archive">◷ <span>Arquivo histórico</span></button>
+      <button data-view="portfolio">✧ <span>Portfólio</span></button>
+      <button data-view="settings">⚙ <span>Configurações</span></button>
+    </nav>
+    <p class="drawer-foot">Sua trajetória. Sua voz. Sua memória.</p>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <main id="main" tabindex="-1">
+    <section class="view active" id="view-home">
+      <div class="cover">
+        <div class="cover-shade"></div>
+        <img class="cover-avatar" id="coverAvatar" src="assets/avatar-full-transparent-1.png" alt="Personagem ilustrada de referência de Fênix Vamphyra">
+        <div class="cover-copy">
+          <p class="eyebrow">MC COMMAND CENTER</p>
+          <h1>FÊNIX<br><em>VAMPHYRA</em></h1>
+          <p class="role">MESTRE DE CERIMÔNIAS</p>
+          <p class="cover-desc">Presença de palco. Memória cultural. Voz em movimento.</p>
+          <button class="primary-btn" data-go="dashboard">ENTRAR NA CENTRAL <span>↗</span></button>
+        </div>
+        <button class="cover-menu" data-open-menu aria-label="Abrir navegação">☰</button>
+      </div>
+      <div class="home-bottom">
+        <div><span class="live-dot"></span> CENTRAL PESSOAL · CULTURA EM MOVIMENTO</div>
+        <p>Planeje. Apresente. Registre. Preserve.</p>
+      </div>
+      <div class="quick-launch-grid" aria-label="Acesso rápido">
+        <button class="quick-launch" data-go="events"><span class="quick-icon">▦</span><strong>Próximos<br>eventos</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="scripts"><span class="quick-icon">🎤</span><strong>Roteiros<br>de palco</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="people"><span class="quick-icon">♧</span><strong>Convidados<br>e artistas</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="archive"><span class="quick-icon gold">★</span><strong>Histórico<br>de eventos</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="portfolio"><span class="quick-icon gold">▰</span><strong>Portfólio<br>cultural</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="partners"><span class="quick-icon gold">◇</span><strong>Parceiros e<br>patrocinadores</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="settings"><span class="quick-icon">✦</span><strong>Personalizar<br>seu app</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="library"><span class="quick-icon">⇩</span><strong>Biblioteca<br>de materiais</strong><i>↗</i></button>
+        <button class="quick-launch" data-go="dashboard"><span class="quick-icon">ⓘ</span><strong>Central de<br>comando</strong><i>↗</i></button>
+      </div>
+      <div class="home-feature" id="homeFeature">
+        <div><p class="eyebrow">SEU PRÓXIMO MOVIMENTO</p><h2 id="homeFeatureTitle">Sua próxima roda começa aqui.</h2><p id="homeFeatureText">Cadastre um evento para organizar a data, o local, os convidados e o roteiro.</p><button class="primary-btn small" data-go="events">Abrir agenda <span>↗</span></button></div>
+        <img src="assets/phoenix-battle.webp" alt="Arte de fênix em estética hip-hop" loading="lazy">
+      </div>
+    </section>
+
+    <section class="view" id="view-dashboard">
+      <div class="page-head"><p class="eyebrow">VISÃO GERAL</p><h2>Central de comando<span class="accent">.</span></h2><p>Seu trabalho organizado em um só lugar.</p></div>
+      <div class="stats-grid">
+        <article class="stat-card"><span>PRÓXIMOS</span><strong id="statUpcoming">0</strong><small>eventos planejados</small></article>
+        <article class="stat-card"><span>MEMÓRIA</span><strong id="statDone">0</strong><small>eventos realizados</small></article>
+        <article class="stat-card"><span>REDE</span><strong id="statPeople">0</strong><small>perfis cadastrados</small></article>
+      </div>
+      <div class="section-row"><h3>Próximos movimentos</h3><button class="text-btn" data-go="events">Ver agenda ↗</button></div>
+      <div id="dashboardEvents" class="stack"></div>
+      <div class="feature-banner"><div><p class="eyebrow">NO SEU TEMPO</p><h3>Uma trajetória que cresce a cada evento.</h3><p>Os registros concluídos alimentam seu arquivo e seu portfólio.</p><button class="outline-btn" data-go="archive">Abrir memória histórica</button></div><img src="assets/phoenix-wall.jpg" alt="" loading="lazy"></div>
+    </section>
+
+    <section class="view" id="view-events">
+      <div class="page-head"><p class="eyebrow">PRODUÇÃO</p><h2>Agenda & eventos<span class="accent">.</span></h2><p>Crie, edite e acompanhe cada etapa.</p></div>
+      <div class="toolbar"><input id="eventSearch" placeholder="Buscar eventos…" aria-label="Buscar eventos"><button class="primary-btn small" id="newEventBtn">＋ Novo evento</button></div>
+      <div class="filter-row"><button class="chip active" data-event-filter="all">Todos</button><button class="chip" data-event-filter="planned">Planejados</button><button class="chip" data-event-filter="done">Realizados</button></div>
+      <div id="eventsList" class="stack"></div>
+    </section>
+
+    <section class="view" id="view-scripts">
+      <div class="page-head"><p class="eyebrow">PREPARAÇÃO DE PALCO</p><h2>Meus roteiros<span class="accent">.</span></h2><p>Blocos editáveis, organizados para a sua apresentação.</p></div>
+      <div class="toolbar"><select id="scriptEventSelect" aria-label="Escolher evento"><option value="">Escolha um evento</option></select><button class="primary-btn small" id="addBlockBtn">＋ Bloco</button></div>
+      <div id="scriptEditor" class="stack"></div>
+      <button class="primary-btn full" id="saveScriptBtn">Salvar roteiro</button>
+    </section>
+
+    <section class="view" id="view-stage">
+      <div class="page-head"><p class="eyebrow">APRESENTAÇÃO AO VIVO</p><h2>Modo palco<span class="accent">.</span></h2><p>Leitura limpa, sem distrações.</p></div>
+      <div class="stage-controls"><select id="stageEventSelect" aria-label="Evento do modo palco"><option value="">Escolha um evento com roteiro</option></select><button class="outline-btn" id="stageTextBtn">A− / A+</button></div>
+      <div class="stage-card" id="stageCard"><p class="eyebrow">BLOCO ATUAL</p><h3>Nenhum roteiro selecionado</h3><p>Escolha um evento com blocos de roteiro para começar.</p></div>
+      <div class="stage-nav"><button class="outline-btn" id="stagePrev">← Anterior</button><span id="stageCount">0 / 0</span><button class="primary-btn small" id="stageNext">Próximo →</button></div>
+      <div class="timer-card"><div><small>TEMPORIZADOR</small><strong id="timerDisplay">00:00</strong></div><div class="timer-actions"><button class="outline-btn" id="timerStart">Iniciar</button><button class="outline-btn" id="timerReset">Zerar</button></div></div>
+    </section>
+
+    <section class="view" id="view-people">
+      <div class="page-head"><p class="eyebrow">REDE CULTURAL</p><h2>Convidados & rede<span class="accent">.</span></h2><p>Perfis, créditos e participações em um só cadastro.</p></div>
+      <div class="toolbar"><input id="peopleSearch" placeholder="Buscar pessoa ou coletivo…" aria-label="Buscar pessoas"><button class="primary-btn small" id="newPersonBtn">＋ Cadastro</button></div>
+      <div id="peopleList" class="stack"></div>
+    </section>
+
+    <section class="view" id="view-partners">
+      <div class="page-head"><p class="eyebrow">COLABORAÇÃO</p><h2>Patrocinadores & parceiros<span class="accent">.</span></h2><p>Créditos, apoios, editais e equipes.</p></div>
+      <div class="toolbar"><input id="partnerSearch" placeholder="Buscar organização…" aria-label="Buscar parceiros"><button class="primary-btn small" id="newPartnerBtn">＋ Cadastro</button></div>
+      <div id="partnersList" class="stack"></div>
+    </section>
+
+    <section class="view" id="view-library">
+      <div class="page-head"><p class="eyebrow">ACERVO CRIATIVO</p><h2>Biblioteca de materiais<span class="accent">.</span></h2><p>Importe e mantenha seus arquivos organizados no dispositivo.</p></div>
+      <div class="upload-panel"><label for="fileInput" class="upload-drop"><span>＋</span><strong>Adicionar materiais</strong><small>Imagens, logos, fontes e documentos</small></label><input type="file" id="fileInput" multiple accept="image/*,.pdf,.woff,.woff2,.ttf,.otf,.doc,.docx,.txt" hidden></div>
+      <div id="libraryList" class="stack"></div>
+      <p class="note">Os arquivos importados ficam no armazenamento local deste navegador. Exporte um backup regularmente para evitar perda de dados.</p>
+    </section>
+
+    <section class="view" id="view-archive">
+      <div class="page-head"><p class="eyebrow">MEMÓRIA DOCUMENTAL</p><h2>Arquivo histórico<span class="accent">.</span></h2><p>Eventos concluídos, preservados como registros de trajetória.</p></div>
+      <div id="archiveList" class="stack"></div>
+    </section>
+
+    <section class="view" id="view-portfolio">
+      <div class="page-head"><p class="eyebrow">TRAJETÓRIA</p><h2>Portfólio profissional<span class="accent">.</span></h2><p>Selecione os registros que deseja apresentar publicamente.</p></div>
+      <div class="portfolio-hero"><img src="assets/avatar-full-transparent-2.png" alt="Personagem de referência" loading="lazy"><div><p class="eyebrow">MESTRE DE CERIMÔNIAS</p><h3>Fênix Vamphyra</h3><p>Apresentação, mediação cultural e presença de palco.</p></div></div>
+      <div class="stats-grid"><article class="stat-card"><span>EVENTOS</span><strong id="portfolioDone">0</strong><small>concluídos</small></article><article class="stat-card"><span>REDE</span><strong id="portfolioPeople">0</strong><small>perfis cadastrados</small></article></div>
+      <div class="section-row"><h3>Eventos para o portfólio</h3><button class="outline-btn" id="exportPortfolio">Exportar resumo</button></div>
+      <div id="portfolioList" class="stack"></div>
+    </section>
+
+    <section class="view" id="view-settings">
+      <div class="page-head"><p class="eyebrow">PERSONALIZAÇÃO</p><h2>Configurações<span class="accent">.</span></h2><p>Ajuste a aparência e os dados sem alterar os arquivos originais.</p></div>
+      <div class="settings-group"><h3>Identidade visual</h3><label>Cor de destaque<input type="color" id="accentColor" value="#ff4a9e"></label><label>Transparência dos painéis <input type="range" id="panelOpacity" min="55" max="96" value="82"></label><label>Fonte de interface<select id="fontChoice"><option value="system">Moderna (padrão do sistema)</option><option value="serif">Editorial</option><option value="mono">Urbana monoespaçada</option></select></label><label>Avatar de capa<select id="avatarChoice"><option value="assets/avatar-full-transparent-1.png">Avatar original 1</option><option value="assets/avatar-full-transparent-2.png">Avatar original 2</option><option value="assets/avatar-full-transparent-3.png">Avatar original 3</option></select></label><label>Imagem de fundo<select id="backgroundChoice"><option value="assets/portrait-hiphop-wall.jpg">Muro Hip-Hop</option><option value="assets/portrait-neon-square.jpg">Neon urbano</option><option value="assets/phoenix-wall.jpg">Fênix na cidade</option><option value="assets/mc-stage.webp">Palco de batalha</option><option value="assets/phoenix-battle.webp">Fênix de fogo</option><option value="assets/graffiti-fire.webp">Graffiti e fogo</option></select></label><button class="primary-btn" id="applySettings">Aplicar personalização</button></div>
+      <div class="settings-group"><h3>Dados e segurança</h3><p>Faça cópias dos registros e dos dados estruturados.</p><div class="button-row"><button class="outline-btn" id="exportBackup">Exportar backup JSON</button><label class="outline-btn import-label" for="importBackup">Importar backup<input id="importBackup" type="file" accept="application/json" hidden></label></div><button class="danger-btn" id="resetApp">Apagar dados locais</button></div>
+      <div class="settings-group"><h3>Sobre esta versão</h3><p>Aplicativo web instalável, com dados salvos neste dispositivo. Não possui sincronização em nuvem nem publicação automática em redes sociais.</p><p class="small-muted">Versão 0.2 · Os avatares originais de referência foram preservados sem edição.</p></div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<dialog id="eventDialog" class="modal"><form id="eventForm"><div class="modal-head"><div><p class="eyebrow">AGENDA</p><h3 id="eventDialogTitle">Novo evento</h3></div><button type="button" class="icon-btn" data-close="eventDialog">×</button></div><input type="hidden" id="eventId"><label>Nome do evento *<input id="eventName" required maxlength="120" placeholder="Nome oficial"></label><label>Categoria<input id="eventCategory" placeholder="Roda de conversa, festival, oficina…"></label><div class="form-grid"><label>Data<input id="eventDate" type="date"></label><label>Horário<input id="eventTime" type="time"></label></div><label>Local<input id="eventLocation" placeholder="Espaço / cidade"></label><label>Descrição<textarea id="eventDescription" rows="3" placeholder="Contexto, objetivos e observações"></textarea></label><label>Convidados (separe por vírgula)<input id="eventGuests" placeholder="@perfil, nome artístico…"></label><label>Roteiro inicial<textarea id="eventScript" rows="3" placeholder="Uma ideia ou bloco inicial do roteiro"></textarea></label><div class="modal-actions"><button type="button" class="outline-btn" data-close="eventDialog">Cancelar</button><button class="primary-btn" type="submit">Salvar evento</button></div></form></dialog>
+
+<dialog id="personDialog" class="modal"><form id="personForm"><div class="modal-head"><div><p class="eyebrow">REDE CULTURAL</p><h3 id="personDialogTitle">Novo perfil</h3></div><button type="button" class="icon-btn" data-close="personDialog">×</button></div><input type="hidden" id="personId"><label>Nome público / artístico *<input id="personName" required maxlength="120"></label><label>Categoria<input id="personCategory" placeholder="Artista, coletivo, mediador…"></label><label>Instagram / @<input id="personHandle" placeholder="@perfil"></label><label>Link público<input id="personLink" type="url" placeholder="https://…"></label><label>Minibio<textarea id="personBio" rows="3"></textarea></label><label class="check-label"><input type="checkbox" id="personPublic"> Autorizado para exibição no portfólio público</label><div class="modal-actions"><button type="button" class="outline-btn" data-close="personDialog">Cancelar</button><button class="primary-btn" type="submit">Salvar perfil</button></div></form></dialog>
+
+<dialog id="partnerDialog" class="modal"><form id="partnerForm"><div class="modal-head"><div><p class="eyebrow">COLABORAÇÃO</p><h3 id="partnerDialogTitle">Novo parceiro</h3></div><button type="button" class="icon-btn" data-close="partnerDialog">×</button></div><input type="hidden" id="partnerId"><label>Nome *<input id="partnerName" required maxlength="120"></label><label>Tipo<select id="partnerType"><option>Parceiro cultural</option><option>Patrocinador</option><option>Edital / financiador</option><option>Equipe / profissional</option><option>Apoiador</option></select></label><label>Link público<input id="partnerLink" type="url" placeholder="https://…"></label><label>Descrição / contrapartidas<textarea id="partnerDescription" rows="3"></textarea></label><div class="modal-actions"><button type="button" class="outline-btn" data-close="partnerDialog">Cancelar</button><button class="primary-btn" type="submit">Salvar cadastro</button></div></form></dialog>
+
+<dialog id="closeEventDialog" class="modal"><form id="closeEventForm"><div class="modal-head"><div><p class="eyebrow">REGISTRO HISTÓRICO</p><h3>Concluir evento</h3></div><button type="button" class="icon-btn" data-close="closeEventDialog">×</button></div><input type="hidden" id="closeEventId"><p>Confirme a realização e registre notas para o arquivo e portfólio.</p><label>Data efetiva<input type="date" id="closeEventDate"></label><label>Resumo pós-evento<textarea id="closeEventNotes" rows="4" placeholder="O que aconteceu? Créditos, resultados informados, observações…"></textarea></label><label class="check-label"><input type="checkbox" id="closeEventPortfolio" checked> Incluir no portfólio (revisável depois)</label><div class="modal-actions"><button type="button" class="outline-btn" data-close="closeEventDialog">Cancelar</button><button class="primary-btn" type="submit">Confirmar realização</button></div></form></dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
