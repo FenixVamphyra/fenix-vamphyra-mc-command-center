@@ -1,0 +1,18 @@
+ATUALIZAÇÃO FÊNIX VAMPHYRA MC COMMAND CENTER — V0.4
+
+O QUE MUDA
+- Cada área principal ganha um banner com uma imagem temática diferente, usando as artes que já estão em assets/.
+- Os títulos ficam diretamente sobre a imagem com gradiente de contraste; não há caixa fosca atrás do texto do banner.
+- Os cartões de conteúdo ficam sólidos para leitura.
+- Mantidos menu hambúrguer, navegação, recursos existentes e configurações de cor, transparência, fonte, avatar, fundo, backup/importação e redefinição.
+- A programação da 6ª Semana do Hip Hop já está preparada no app.js v0.3 e é mantida nesta atualização.
+
+COMO ATUALIZAR NO GITHUB
+1. Faça backup dos arquivos atuais.
+2. Extraia o ZIP de atualização.
+3. Envie app.js, styles.css, sw.js e index.html para a raiz do repositório (mesmo nível do manifest.webmanifest).
+4. Não envie o ZIP como se fosse o site. Não apague a pasta assets/.
+5. Confirme o commit apenas depois de revisar os quatro arquivos.
+
+OBSERVAÇÃO
+A atualização não adiciona sincronização em nuvem nem novos recursos de prompt/IA. O menu de configurações mantém as opções já implementadas no projeto. A execução em navegador ainda precisa ser testada no dispositivo.

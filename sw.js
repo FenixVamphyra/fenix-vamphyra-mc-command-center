@@ -1,4 +1,4 @@
-const CACHE='fenix-mc-shell-v2';
+const CACHE='fenix-mc-shell-v4';
 const SHELL=[
  './','./index.html','./styles.css','./app.js','./manifest.webmanifest',
  './assets/icon-192.png','./assets/icon-512.png','./assets/icon-maskable-512.png','./assets/apple-touch-icon.png',
